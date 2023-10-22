@@ -39,7 +39,7 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id`, `Name`, `email`, `balance`) VALUES
-(1, 'Sindhu', 'Sindhu@gmail.com', 200000),
+(1, 'Chethan', 'Chethan@gmail.com', 200000),
 (2, 'Keerthi', 'kreethi@gmail.com', 110000),
 (3, 'Jeevan V', 'jv@gmail.com', 145000),
 (4, 'Dhanush', 'dhanush@gmail.com', 300000),
@@ -57,7 +57,7 @@ INSERT INTO `customer` (`id`, `Name`, `email`, `balance`) VALUES
 --
 
 CREATE TABLE `history` (
-  `their_id` int(11) NOT NULL,
+  `his_id` int(11) NOT NULL,
   `sender` varchar(255) NOT NULL,
   `reciever` varchar(255) NOT NULL,
   `amount` bigint(20) NOT NULL
@@ -67,14 +67,14 @@ CREATE TABLE `history` (
 -- Dumping data for table `history`
 --
 
-INSERT INTO `history` (`their_id`, `sender`, `reciever`, `amount`) VALUES
+INSERT INTO `history` (`his_id`, `sender`, `reciever`, `amount`) VALUES
 (1, 'Chethan', 'Jeevan V', 4000),
 (2, 'Jeevan V', 'Keerthi', 400),
 (3, 'Keerthi', 'Dhanush', 1000),
 (4, 'Dhanush', 'Gagan', 1090),
 (5, 'Gagan', 'Akshay', 9000),
 (6, 'Akshay', 'Dhayan', 1070),
-(7, 'Dhayan', 'Sindhu', 8000),
+(7, 'Dhayan', 'Chethan', 8000),
 (8, 'Jeevan Mh', 'Jeevan V', 1700);
 
 --
@@ -91,7 +91,7 @@ ALTER TABLE `customer`
 -- Indexes for table `history`
 --
 ALTER TABLE `history`
-  ADD PRIMARY KEY (`their_id`);
+  ADD PRIMARY KEY (`his_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
